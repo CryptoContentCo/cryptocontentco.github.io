@@ -1,8 +1,6 @@
 theme: jekyll-theme-slate
-title: Patrick Brendel
-description: Journalist in the Cayman Islands
+title: Crypto Content Company
+description: Effective Communication for Web3
 plugins: 
   - jekyll-seo-tag
   - jekyll-sitemap
-# Google Analytics
-google_analytics: UA-146011381-1
