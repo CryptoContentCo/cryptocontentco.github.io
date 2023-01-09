@@ -1,0 +1,8 @@
+theme: jekyll-theme-slate
+title: Patrick Brendel
+description: Journalist in the Cayman Islands
+plugins: 
+  - jekyll-seo-tag
+  - jekyll-sitemap
+# Google Analytics
+google_analytics: UA-146011381-1
