@@ -1,0 +1,267 @@
+/* CSS Reset */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* C3 Styles */
+
+:root {
+    --background: #FAFAFA;
+    --card: #FFFFFF;
+    --utility: #E6E6E6;
+    --text-secondary: #A3A3A3;
+    --text-primary: #000000;
+    --button-text: var(--background);
+    --button-background: var(--text-primary);
+    --button-background-hover: var(--text-secondary);
+  }
+
+  [data-theme="dark"] {
+    --background: #000000;
+    --card: #0A0A0A;
+    --utility: #1A1A1A;
+    --text-secondary: #A3A3A3;
+    --text-primary: #FFFFFF;
+    --button-text: var(--background);
+    --button-background: var(--text-primary);
+    --button-background-hover: var(--text-secondary);
+  }
+
+body {
+    margin: 16px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: var(--background);
+    
+    font-family: "Space Grotesk", sans-serif;
+    font-optical-sizing: auto;
+    font-size: 16px;
+    line-height: 28px;
+    font-weight: 500;
+    font-style: normal;
+    color: var(--text-primary);
+  }
+
+  #logo {
+    height: 30px;
+    width: auto;
+    margin-bottom: 16px;
+    cursor: pointer;
+  }
+
+  main {
+    padding: 32px 0;
+    width: 100%;
+    max-width: 600px;
+    background-color: var(--card);
+    border: 1px solid var(--utility);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    gap: 32px;
+  }
+
+  main > div:nth-child(1) {
+    margin: 0 32px;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    gap: 16px;
+  }
+
+  main > div:nth-child(2) {
+    display: flex;
+    flex-direction: column;
+    width: inherit;
+    gap: 16px;
+  }
+
+  main > div:nth-child(2) p {
+    margin: 0 32px;
+  }
+
+
+  main > div:nth-child(3) {
+    margin: 0 32px;
+  }
+
+  main > div:nth-child(1) > p:first-of-type {
+    font-weight: 700;
+  }
+
+h1 {
+    font-size: 32px;
+    line-height: 40px;
+    text-transform: uppercase;
+}
+
+button {
+    outline: none;
+    border: none;
+    border-radius: 0;
+    cursor: pointer;
+
+    font-family: "Space Grotesk", sans-serif;
+    font-optical-sizing: auto;
+    font-size: 16px;
+    line-height: 28px;
+    font-weight: 500;
+    font-style: normal;
+
+
+    padding: 0 24px;
+    height: 48px;
+
+    background-color: var(--button-background);
+    color: var(--button-text);
+}
+
+button:hover {
+    background-color: var(--button-background-hover);
+}
+
+.contact > div {
+    display: flex;
+    gap: 8px;
+}
+
+.contact > div p {
+    color: var(--text-secondary);
+}
+
+a {
+    color: var(--text-primary);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--text-secondary);
+}
+
+.clients {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+
+  padding: 0 32px;
+}
+
+.client {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 64px;
+
+  border: 1px solid var(--utility);
+
+  margin-right: -1px;
+  margin-bottom: -1px;
+}
+
+.client img {
+  max-width: 100%;
+  height: auto;
+  padding: 16px;
+}
+
+
+@media only screen and (max-width: 768px) {
+    main {
+      padding: 16px 0;
+      gap: 16px;
+    }
+
+    #logo {
+      margin-bottom: 0;
+    }
+
+    main > div:nth-child(1) {
+      margin: 0 16px;
+    }
+
+    main > div:nth-child(2) p {
+      margin: 0 16px;
+    }
+  
+    main > div:nth-child(3) {
+      margin: 0 16px;
+    }
+
+    button {
+      padding: 0 16px;
+      height: 40px;
+    }
+
+    .contact > div {
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+    }
+
+    .contact > div > p {
+        display: none;
+    }
+
+    .clients {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: auto;
+
+      padding: 0 16px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+  .clients {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: auto;
+  }
+}
