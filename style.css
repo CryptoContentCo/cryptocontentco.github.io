@@ -180,6 +180,7 @@ button:hover {
 a {
     color: var(--text-primary);
     text-decoration: none;
+    display: flex;
 }
 
 a:hover {
