@@ -208,8 +208,8 @@ a:hover {
 }
 
 .client img {
-  max-width: 90%;
-  max-height: 90%
+  max-width: 100%;
+  height: auto;
   padding: 16px;
 }
 
